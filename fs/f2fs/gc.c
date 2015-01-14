@@ -499,7 +499,7 @@ static int check_dnode(struct f2fs_sb_info *sbi, struct f2fs_summary *sum,
 	if (IS_ERR(node_page))
 		return 0;
 
-	get_node_info(sbi, nid, dni);
+	get_f2fs_node_info(sbi, nid, dni);
 
 	if (sum->version != dni->version) {
 		f2fs_put_page(node_page, 1);

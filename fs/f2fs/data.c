@@ -585,7 +585,7 @@ static int __allocate_data_block(struct dnode_of_data *dn)
 	__set_data_blkaddr(dn, NEW_ADDR);
 	dn->data_blkaddr = NEW_ADDR;
 
-	get_node_info(sbi, dn->nid, &ni);
+	get_f2fs_node_info(sbi, dn->nid, &ni);
 	set_summary(&sum, dn->nid, dn->ofs_in_node, ni.version);
 
 	type = CURSEG_WARM_DATA;
